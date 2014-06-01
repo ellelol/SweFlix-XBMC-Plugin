@@ -65,8 +65,8 @@ def getURL(videoType=''):
     #When fixed, remove "=''" from params
     #And put "movie" as param for "get_movie_genre"
 
-    url = 'https://sweflix.com/api-v3/json.php?lim=9999'
-    TVurl = 'https://sweflix.com/api-v3/json-tv.php?lim=9999'
+    url = 'https://sweflix.com/api-v3/json.php?lim=9999&auth=d2873ty083q7eduq0387t498ujd02398t'
+    TVurl = 'https://sweflix.com/api-v3/json-tv.php?lim=9999&auth=d2873ty083q7eduq0387t498ujd02398t'
     premium = '&prm=0'
     if auth_user():
         premium = '&prm=1'
@@ -184,7 +184,7 @@ def get_video_premium(video):
     return '0'
 
 def get_video_subtitle(videoID):
-    url ='http://sweflix.com/api-v3/json.php?id=' + videoID
+    url ='http://sweflix.com/api-v3/json.php?auth=d2873ty083q7eduq0387t498ujd02398&tid=' + videoID
     try:
         video_info=open_page(url)
         subtitleFound = True
